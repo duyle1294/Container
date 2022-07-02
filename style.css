@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    transition: .2s linear;
+    list-style: none;
+    color: var(--guray);
+}
+
+:root {
+    --main-color: #25c09c;
+    --kuroi: #333;
+    --guray: #999;
+    --usuishiroi: #e9e9e9;
+    --boder: 1px solid rgba(0, 0, 0, 0.1);
+    --shadow-box: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d3ecfd;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+section {
+    padding: 3rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.green {
+    background-color: #25c09c !important;
+    color: #fff !important;
+}
+
+.red {
+    background-color: #ec5b5b !important;
+    color: #fff !important;
+}
+
+.blue {
+    background-color: #69a0f3 !important;
+    color: #fff !important;
+}
+
+.radius-l {
+    border-radius: .7rem 0 0 .7rem !important;
+}
+
+.radius-r {
+    border-radius: 0 .7rem .7rem 0 !important;
+}
+
+.button,
+.btn {
+    padding: 0.6rem 2.7rem;
+    min-width: 8.1rem;
+    margin-right: 0.6rem;
+    margin-bottom: .9rem;
+    border-radius: .9rem;
+    font-size: 1.8rem;
+    color: var(--kuroi);
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: var(--usuishiroi);
+}
+
+.btn.active,
+.btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.btn2,.item-btn,
+.btn2-plus,
+.btn3 {
+    background-color: #fff;
+    padding: 0.3rem 1.5rem;
+    border: var(--boder);
+    min-width: 9.3rem;
+    font-size: 1.6rem;
+    color: var(--guray);
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 0 -1.9px;
+    background-color: #fff;
+}
+
+.btn3{
+    min-width: 10.3rem;
+}
+
+.item-btn{
+    width: 13.5rem;
+}
+
+.item-btn:hover,
+.item-btn.active,
+.btn3.active,
+.btn3:hover,
+.btn2.active,
+.btn2:hover,
+.btn2-plus:hover,
+.btn2-plus.active {
+    color: var(--kuroi);
+    background-color: #d3ecfd;
+    box-shadow: var(--shadow-box);
+}
+
+.heading h3 {
+    font-size: 4rem;
+    color: var(--kuroi);
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+
+
+#menu-btn {
+    display: none;
+    font-size: 2.1rem;
+}
+
+#container-size{
+    height: 60rem;
+}
+
+.container-size .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    overflow-y: scroll;
+    justify-content: space-between;
+    /* padding: 0 3rem; */
+}
+
+.container-size .box-container .box{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-right: 3.5rem;
+}
+
+.container-size .box-container .box .div1{
+    width: 45%;
+}
+
+.container-size .box-container .box .div2{
+    width: 45%;
+}
+
+.container-size .box-container .box img {
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem .5rem;
+    border-radius: 1rem;
+}
+
+.container-size .box-container .box.active img,
+.container-size .box-container .box:hover img {
+    background-color: #e3f7ff;
+}
+
+.container-size .box-container .box h3 {
+    font-size: 1.8rem;
+    /* text-align: center; */
+    color: var(--kuroi);
+    line-height: 1.2;
+    
+}
+
+.container-size .box-container .box:hover h3,
+.container-size .box-container .box:hover span {
+    color: var(--main-color);
+}
+
+.container-size .box-container .box h3 span {
+    font-size: 1.2rem;
+    color: var(--kuroi);
+}
+
+.container-size .box-container .box .square {
+    font-size: 1.5rem;
+    color: var(--kuroi);
+    margin: 0.5rem 0;
+}
+
+.container-size .box-container .box .ps {
+    font-size: 1.3rem;
+}
+
+form {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+form .check {
+    background-color: var(--main-color);
+    display: inline-block;
+    padding: 0.3rem 3rem;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 3px;
+    border-radius: .9rem;
+    cursor: pointer;
+}
+
+form .check:hover {
+    background-color: #0e3e6e;
+}
+
+/* alert dialog starts */
+
+.alert {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: rgba(200, 200, 200, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.alert.active {
+    display: flex;
+}
+
+.alert .container {
+    padding: 3rem 4.5rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-box);
+}
+
+.alert .container i {
+    font-size: 6rem;
+    color: var(--usuishiroi);
+    margin-bottom: 1.5rem;
+}
+
+.alert .container h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: var(--kuroi);
+}
+
+/* alert dialog ends */
+
+/* set-interior　section stars ! */
+.set-interior .content {
+    display: flex;
+}
+
+.set-interior .content .view {
+    width: 100%;
+}
+
+.swith-view .in-side.remove {
+    display: none;
+}
+
+.swith-view .out-side {
+    display: none;
+}
+
+.swith-view .out-side.active {
+    display: block;
+}
+
+.set-interior .content .view .head-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.set-interior .content .d3-view {
+    /* min-height: 60vh; */
+    margin: 0;padding: 0;
+}
+
+.set-interior .content .view img {
+    width: 100%;
+    align-items: center;
+}
+
+.set-interior .content .cost{
+    display: flex;
+    background-color: #d3ecfd;
+    padding: 1.2rem 1.8rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .9rem;
+    
+}
+
+.set-interior .content .price{
+    display: flex;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.set-interior .content .cost p{
+    font-size: 1.5rem;
+}
+
+.set-interior .content .cost h3{
+    font-size: 2.1rem;
+    color: var(--kuroi);
+}
+
+.set-interior .content .cost span{
+    font-size: 1.5rem;
+    color: var(--kuroi);
+    font-weight: 500;
+    padding-bottom: -.6rem;
+}
+
+.set-interior .content .cost .cost-est{
+    display: block;
+    padding: .6rem 1.2rem ;
+    background-color: var(--main-color);
+    font-size: 1.6rem;
+    color: #fff;
+    border-radius: .9rem;
+}
+
+.set-interior .content .setting {
+    background-color: #f1f1f1;
+    width: 72rem;
+    max-height: 80vh;
+    margin-left: 3rem;
+    padding: 2.4rem;
+    position: relative;
+    border-radius: 1.5rem;
+    /* box-shadow: var(--shadow-box); */
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.set-interior .content .setting.active {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    min-width: 0;
+    width: 0;
+    margin-left: -2rem;
+    /* display: none; */
+}
+
+.set-interior .content #minimize-menu {
+    font-size: 3rem;
+    width: 7rem;
+    height: 7rem;
+    text-align: center;
+    line-height: 7rem;
+    background-color: var(--guray);
+    color: #fff;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    margin-left: 3rem;
+    display: none;
+}
+
+.set-interior .content #minimize-menu.active {
+    display: block;
+}
+
+.setting #setting-menu {
+    font-size: 2.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5.5rem;
+    height: 5.5rem;
+    text-align: center;
+    line-height: 5.5rem;
+    background-color: var(--guray);
+    color: #fff;
+    border-radius: 1.2rem 1.2rem 1.2rem 0;
+    cursor: pointer;
+}
+
+
+.setting .table {
+    display: none;
+}
+
+.setting .table.active {
+    display: block;
+}
+
+.setting .heading {
+    font-size: 2.7rem;
+    color: var(--kuroi);
+}
+
+.setting .setting-box {
+    display: flex;
+    margin: 1.5rem 0;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: .9rem;
+    gap: 1.5rem;
+}
+
+/* .add-item .setting-box .img,
+.setting .setting-box .img{
+    height: 13rem;
+} */
+
+.add-item .setting-box img,
+.setting .setting-box img {
+    height: 13rem;
+    /* height: 100%; */
+}
+
+.add-item .setting-box .information-box,
+.setting .setting-box .information-box {
+    /* min-width: 12rem; */
+    font-size: 1.3rem;
+}
+
+.add-item .setting-box .information-box .name,
+.setting .setting-box .information-box .name {
+    font-size: 1.5rem;
+    color: var(--kuroi);
+    margin-bottom: .5rem;
+}
+
+.add-item .setting-box .information-box .size,
+.add-item .setting-box .information-box .position,
+.setting .setting-box .information-box .size,
+.setting .setting-box .information-box .position{
+    color: var(--kuroi);
+    font-size: 1.3rem;
+    margin: 0;padding: 0;
+}
+
+.setting .setting-box .icon i {
+    border-radius: 50%;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: .6rem;
+    color: var(--guray);
+    margin-bottom: .9rem;
+    cursor: pointer;
+}
+
+/* sort table */
+.setting .setting-box .box {
+    display: block;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.setting .setting-box .position2 {
+    font-size: 1.5rem;
+    line-height: 3.3rem;
+    min-width: 4.5rem;
+}
+
+.setting .setting-box .type {
+    font-size: 1.5rem;
+}
+
+.setting .setting-box .main {
+    min-width: 15rem;
+    border: var(--boder);
+    border-radius: .6rem;
+    padding: .3rem .9rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: var(--kuroi);
+}
+
+.setting .sort-down {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 0.9rem 0.9rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 999;
+    border: var(--boder);
+}
+
+.setting .box .sort-down.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.setting .box .sort-down li {
+    padding: .3rem .9rem;
+    border-bottom: var(--boder);
+    font-size: 1.5rem;
+    color: var(--kuroi);
+}
+
+.setting .box .sort-down li:last-child {
+    border-radius: 0 0 0.9rem 0.9rem;
+}
+
+.setting .box .sort-down li:hover {
+    background-color: var(--usuishiroi);
+    border-radius: 0 0 0.9rem 0.9rem;
+}
+
+.setting .box #oneline {
+    width: 29.4rem;
+}
+
+/* sort down menu ends */
+
+/* add-item dialog stars */
+
+.add-item{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    border-radius: 1.2rem;
+    background-color: rgba(200, 200, 200, .6);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.add-item.active{
+    display: flex;
+}
+
+.add-item .container{
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 1.8rem;
+    position: relative;
+    height: 88.5vh;
+}
+
+
+.add-item .container .close{
+    font-size: 3rem;
+    position: absolute;
+    top: 0rem;right: 0rem;
+    padding: 2rem 3rem;
+    cursor: pointer;
+}
+
+.add-item .container .close:hover i{
+    color: var(--main-color);
+    transform: rotate(90deg);
+}
+
+.add-item .container .heading{
+    font-size: 2.7rem;
+    color: var(--kuroi);
+}
+
+.add-item .container .item-table{
+    margin-top: 1.5rem;
+    display: none;
+    overflow-x: auto;
+    height: 64vh;
+    padding-right: 1.5rem;
+}
+
+.add-item .container .item-table.active{
+    display: block;
+}
+
+
+.add-item .container .line{
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    width: 80rem;
+}
+
+
+.add-item .container .line .setting-box{
+    display: flex;
+    border: var(--boder);
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: .9rem;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-box);
+}
+
+.add-item .container .line .setting-box:hover{
+    border: 2px solid #d3ecfd;
+}
+
+.add-item .container .line .setting-box img{
+    height: 16rem;
+}
+
+.add-item .container .line .setting-box .add-btn{
+    font-size: 1.6rem;
+    padding: 0.6rem 2rem;
+    background-color: var(--main-color);
+    border-radius: .6rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.add-item .container .line .setting-box .add-btn:hover{
+    background-color: #0e3e6e;
+}
+
+
+
+/* add-item dialog ends */
+
+
+
+
+
+
+
+/* delete dialog stars */
+
+.delete-dialog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1.2rem;
+    background-color: rgba(200, 200, 200, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.delete-dialog.active {
+    display: flex;
+}
+
+.delete-dialog .container {
+    padding: 2.1rem 3.9rem;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    text-align: center;
+    color: var(--kuroi);
+}
+
+.delete-dialog .container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--kuroi);
+}
+
+.delete-dialog .container button {
+    font-size: 1.5rem;
+}
+
+/* delete dialog ends */
+
+
+
+
+/* set-interior　section ends ! */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: inline;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+        transition: .2 linear;
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top: var(--boder);
+        border-bottom: var(--boder);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2 linear;
+    }
+
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+}
+
+@media (max-width:450) {
+
+    html {
+        font-size: 50%;
+    }
+
+}

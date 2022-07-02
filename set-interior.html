@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Container</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="set-interior">
+
+        <div class="heading">
+            <h3>装飾設定</h3>
+        </div>
+
+        <div class="content">
+            <div class="view">
+                <div class="head-line">
+
+                    <div class="swith-view">
+
+                        <div class="in-out">
+                            <button class="btn active">
+                                内側
+                            </button>
+                            <button class="btn">
+                                外側
+                            </button>
+                        </div>
+
+                        <div class="in-side">
+                            <button data-src="./Assets/allview/allview-01.png" class="btn2 radius-l">
+                                天井
+                            </button>
+                            <button data-src="./Assets/allview/allview-02.png" class="btn2">
+                                床
+                            </button>
+                            <button data-src="./Assets/allview/allview-03.png" class="btn2">
+                                側面1
+                            </button>
+                            <button data-src="./Assets/allview/allview-04.png" class="btn2">
+                                側面2
+                            </button>
+                            <button data-src="./Assets/allview/allview-05.png" class="btn2">
+                                側面3
+                            </button>
+                            <button data-src="./Assets/allview/allview-06.png" class="btn2 radius-r">
+                                側面4
+                            </button>
+                        </div>
+
+                        <div class="out-side">
+                            <button data-src="./Assets/allview/allview-07.png" class="btn2-plus radius-l">
+                                天井
+                            </button>
+                            <button data-src="./Assets/allview/allview-08.png" class="btn2-plus">
+                                側面1
+                            </button>
+                            <button data-src="./Assets/allview/allview-09.png" class="btn2-plus">
+                                側面2
+                            </button>
+                            <button data-src="./Assets/allview/allview-10.png" class="btn2-plus">
+                                側面3
+                            </button>
+                            <button data-src="./Assets/allview/allview-11.png" class="btn2-plus radius-r">
+                                側面4
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="add-item-div">
+                        <button class="btn green" id="item-btn">
+                            アイテム設置
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="d3-view">
+                    <img class="perpective" src="./Assets/allview/allview-01.png" alt="">
+                </div>
+
+                <div class="cost">
+                    <div class="price">
+                        <p>御見積総額</p>
+                        <h3>000,000<span>円(税込み)</span></h3>
+                    </div>
+                    <div class="cost-est">結果詳細を見る</div>
+                </div>
+
+            </div>
+
+            <div class="fa-solid fa-angles-left" id="minimize-menu"></div>
+
+            <div class="setting">
+
+                <div class="fa-solid fa-angles-right" id="setting-menu"></div>
+
+                <h3 class="heading">設定</h3>
+
+                <div class="tab">
+                    <button class="btn3 active radius-l">内装</button>
+                    <button class="btn3">内壁</button>
+                    <button class="btn3">外装</button>
+                    <button class="btn3 radius-r">外壁</button>
+                </div>
+
+                <div class="table active">
+                    <div class="setting-box">
+
+                        <div class="img">
+                            <img src="./Assets/items/item-01.png" alt="">
+                        </div>
+
+                        <div class="information-box">
+                            <h3 class="name">
+                                スポットライト
+                            </h3>
+                            <p class="size">
+                                サイズ：000x000
+                            </p>
+                            <p class="position">
+                                位置： 天井
+                            </p>
+                            <p class="ps">
+                                説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                            </p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-solid fa-up-down-left-right"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="setting-box">
+
+                        <div class="img">
+                            <img src="./Assets/items/item-03.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                            <h3 class="name">
+                                両開きガラスドア
+                            </h3>
+                            <p class="size">
+                                サイズ：000x000
+                            </p>
+                            <p class="position">
+                                位置：側面2
+                            </p>
+                            <p class="ps">
+                                説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                            </p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-solid fa-up-down-left-right"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="table">
+                    <div class="setting-box">
+
+                        <div class="position2">
+                            床
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main">
+                                    なし
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>茶色</li>
+                                        <li>グレー</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main">
+                                    なし
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>茶色</li>
+                                        <li>グレー</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-box">
+
+                        <div class="position2">
+                            壁
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main">
+                                    なし
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>レンガ</li>
+                                        <li>木目</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main">
+                                    なし
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>茶色</li>
+                                        <li>グレー</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-box">
+
+                        <div class="position2">
+                            天井
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main">
+                                    なし
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>レンガ</li>
+                                        <li>木目</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main">
+                                    なし
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>茶色</li>
+                                        <li>グレー</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="table">
+                    <div class="setting-box">
+
+                        <div class="img">
+                            <img src="./Assets/items/item-04.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                            <h3 class="name">
+                                屋外機
+                            </h3>
+                            <p class="size">
+                                サイズ：000x000
+                            </p>
+                            <p class="position">
+                                位置： 天井
+                            </p>
+                            <p class="ps">
+                                説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                            </p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-solid fa-up-down-left-right"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-box">
+
+                        <div class="img">
+                            <img src="./Assets/items/item-05.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                            <h3 class="name">
+                                ひさし-1
+                            </h3>
+                            <p class="size">
+                                サイズ：000x000
+                            </p>
+                            <p class="position">
+                                位置：側面1
+                            </p>
+                            <p class="ps">
+                                説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                            </p>
+                        </div>
+
+                        <div class="icon">
+                            <i class="fa-solid fa-up-down-left-right"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="table">
+
+                    <div class="setting-box">
+
+                        <div class="position2">
+                            壁
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main" id="oneline">
+                                    コンテナパネル
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>木目調</li>
+                                        <li>縦ガルバ</li>
+                                        <li>横ガルバ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-box">
+
+                        <div class="position2">
+                            天井
+                        </div>
+
+                        <div class="type">
+                            <div class="box">
+                                <div class="main" id="oneline">
+                                    黒
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="sort-down">
+                                    <ul class="list-item">
+                                        <li>青</li>
+                                        <li>緑</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="delete-dialog">
+                <div class="container">
+                    <h3>本当に削除しても良いですか?</h3>
+                    <button class="button cancel">キャンセル</button>
+                    <button class="button blue cancel">はい</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="add-item" id="add-item">
+
+            <div class="container">
+
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <h3 class="heading">アイテム設置</h3>
+
+                <div class="tab">
+                    <button class="item-btn active radius-l">ドア</button>
+                    <button class="item-btn">窓</button>
+                    <button class="item-btn">ライト</button>
+                    <button class="item-btn">設備</button>
+                    <button class="item-btn">装飾</button>
+                    <button class="item-btn radius-r">家具</button>
+                </div>
+
+                <div class="item-table active">
+
+                    <div class="overflow">
+
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/items-07.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        親子ガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-09.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        片開き ガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/items-10.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        玄関引戸
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-11.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        ロンカラー片開き 
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/item-03.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-08.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item-table">
+
+                    <div class="overflow">
+
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/items-12.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-13.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/items-14.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-15.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/items-12.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-13.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-table">
+
+                    <div class="overflow">
+
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/item-01.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-16.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item-table">
+
+                    <div class="overflow">
+
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/item-04.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-17.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                                
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/item-05.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/item-06.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item-table">
+
+                    <div class="overflow">
+
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/items-18.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/items-18.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="item-table">
+
+                    <div class="overflow">
+
+                        <div class="line">
+                            <div class="setting-box">
+                                <div class="img">
+                                    <img src="./Assets/items/item-03.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="setting-box">
+
+                                <div class="img">
+                                    <img src="./Assets/items/item-03.png"" alt="">
+                            </div>
+        
+                            <div class=" information-box">
+                                    <h3 class="name">
+                                        両開きガラスドア
+                                    </h3>
+                                    <p class="size">
+                                        サイズ：000x000
+                                    </p>
+                                    <p class="ps">
+                                        説明文章ー説明文章ー説明文章ー説明文章ー説明文章ー説明文章
+                                    </p>
+                                    <div class="add-btn">
+                                        設置
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <form action="./set-interior.html">
+            <button class="check">
+                パース確認
+            </button>
+        </form>
+
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
